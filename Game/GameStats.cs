@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,7 +23,7 @@ namespace Game
             BonusDropChance = bonusDropChance;
             ObstacleDropChance = obstacleDropChance;
             LivesCount = livesCount;
-            LastEvent = new GameEvent("Игра началась");
+            LastEvent = new GameEvent("Game Started");
             StartedAt = DateTime.Now;
             Record = new Record();
             Record.ReadRecord();
