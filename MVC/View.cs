@@ -1,4 +1,4 @@
-﻿using Config;
+using Config;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,27 +44,27 @@ namespace MVC
         {
             string[] events = new string[5];
             events[0] = "┌──────────────────────────────┐";
-            events[1] = "│     ▒ Последнее событие ▒    │";
-            events[2] = $"│{$" ■ {gameStats.LastEvent.TimeSpan:ss} секунд назад",-30}│";
+            events[1] = "│     ▒     Last Event    ▒    │";
+            events[2] = $"│{$" ■ {gameStats.LastEvent.TimeSpan:ss} sec. ago",-30}│";
             events[3] = $"│{$" ■ {gameStats.LastEvent.Event}",-30}│";
             events[4] = "└──────────────────────────────┘";
             ViewContents.Add(new ViewContent(43, 2, ConsoleColor.Yellow, events));
 
             string[] status = new string[7];
             status[0] = "┌──────────────────────────────┐";
-            status[1] = "│       ▒ Статус игры ▒        │";
-            status[2] = $"│{$" ■ Жизни: {gameStats.LivesCount}",-30}│";
-            status[3] = $"│{$" ■ Шанс препятствий: {Math.Round(gameStats.ObstacleDropChance, 1)}%",-30}│";
-            status[4] = $"│{$" ■ Шанс бонуса: {gameStats.BonusDropChance}%",-30}│";
-            status[5] = $"│{$" ■ Задержка: {gameStats.GameSpeedDelay} мс",-30}│";
+            status[1] = "│       ▒ Game Status ▒        │";
+            status[2] = $"│{$" ■ Lives: {gameStats.LivesCount}",-30}│";
+            status[3] = $"│{$" ■ Obstacle chance: {Math.Round(gameStats.ObstacleDropChance, 1)}%",-30}│";
+            status[4] = $"│{$" ■ Bonus chance: {gameStats.BonusDropChance}%",-30}│";
+            status[5] = $"│{$" ■ Delay: {gameStats.GameSpeedDelay} мс",-30}│";
             status[6] = "└──────────────────────────────┘";
             ViewContents.Add(new ViewContent(43, 7, ConsoleColor.Green, status));
 
             string[] stats = new string[5];
             stats[0] = "┌──────────────────────────────┐";
-            stats[1] = "│        ▒ Статистика ▒        │";
-            stats[2] = $"│{$" ■ Время: {(DateTime.Now - gameStats.StartedAt):hh\\:mm\\:ss}",-30}│";
-            stats[3] = $"│{$" ■ Рекорд: {record:hh\\:mm\\:ss}",-30}│";
+            stats[1] = "│        ▒ Statistics ▒        │";
+            stats[2] = $"│{$" ■ Time: {(DateTime.Now - gameStats.StartedAt):hh\\:mm\\:ss}",-30}│";
+            stats[3] = $"│{$" ■ Record: {record:hh\\:mm\\:ss}",-30}│";
             stats[4] = "└──────────────────────────────┘";
             ViewContents.Add(new ViewContent(43, 14, ConsoleColor.Cyan, stats));
         }
