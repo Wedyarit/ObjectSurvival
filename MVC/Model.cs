@@ -1,4 +1,4 @@
-﻿using Config;
+using Config;
 using Game;
 using GameAbstract;
 using System;
@@ -35,7 +35,7 @@ namespace MVC
                     {
                         Obstacles.Clear();
                         GameStats.LivesCount--;
-                        GameStats.LastEvent = new GameEvent("-1 Жизнь");
+                        GameStats.LastEvent = new GameEvent("-1 Life");
                     }
                     else
                     {
@@ -56,22 +56,22 @@ namespace MVC
                     {
                         case (int)BonusModifiers.Obstacles:
                             GameStats.ObstacleDropChance -= Settings.ObstacleBonusModifier;
-                            GameStats.LastEvent = new GameEvent($"-{Settings.ObstacleBonusModifier}% Шанс препятствий");
+                            GameStats.LastEvent = new GameEvent($"-{Settings.ObstacleBonusModifier}% Obstacle chance");
                             break;
 
                         case (int)BonusModifiers.Delay:
                             GameStats.GameSpeedDelay += Settings.DelayBonusModifier;
-                            GameStats.LastEvent = new GameEvent($"+{Settings.DelayBonusModifier} мс Задержка");
+                            GameStats.LastEvent = new GameEvent($"+{Settings.DelayBonusModifier} ms Delay");
                             break;
 
                         case (int)BonusModifiers.Live:
                             GameStats.LivesCount += Settings.LiveBonusModifier;
-                            GameStats.LastEvent = new GameEvent($"+{Settings.LiveBonusModifier} Жизнь");
+                            GameStats.LastEvent = new GameEvent($"+{Settings.LiveBonusModifier} Life");
                             break;
 
                         case (int)BonusModifiers.Bonus:
                             GameStats.BonusDropChance += Settings.BonusDropModifier;
-                            GameStats.LastEvent = new GameEvent($"+{Settings.BonusDropModifier - 1}% Шанс бонуса");
+                            GameStats.LastEvent = new GameEvent($"+{Settings.BonusDropModifier - 1}% Bonus Chance");
                             break;
                     }
                 }
