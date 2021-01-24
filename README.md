@@ -24,6 +24,9 @@ The code is organized according to the [MVC](https://en.wikipedia.org/wiki/Model
 # Dependencies
 There are no dependencies! Download the code and enjoy!
 
+# Appearance
+![Game Appearance](https://i.imgur.com/pBh045H.png)
+
 ## Contributing
 The works were done and decorated by [@Wedyarit (Vyacheslav)](https://github.com/Doggy4).
 
